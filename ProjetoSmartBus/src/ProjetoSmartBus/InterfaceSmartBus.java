@@ -9,6 +9,5 @@ public interface InterfaceSmartBus {
 	
 	public void verhorario (Passageiro pas, Onibus oni);
 	
-	public void verhorario (Passageiro pas, Onibus outroOni);
 
 }
