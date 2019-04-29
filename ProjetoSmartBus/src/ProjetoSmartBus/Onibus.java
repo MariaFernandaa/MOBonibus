@@ -1,5 +1,6 @@
 package ProjetoSmartBus;
 import java.sql.Date;
+import java.util.ArrayList;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -130,6 +131,11 @@ public class Onibus {
 		} else if (!precos.equals(other.precos))
 			return false;
 		return true;
+	}
+
+	 Onibus criarOnibus(String string, ArrayList<Passageiro> passageiro) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }	

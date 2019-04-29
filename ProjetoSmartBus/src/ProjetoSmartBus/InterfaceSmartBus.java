@@ -9,5 +9,13 @@ public interface InterfaceSmartBus {
 	
 	public void verhorario (Passageiro pas, Onibus oni);
 	
+	
+	public void verpreco (Passageiro pas, Onibus oni);
+	
+	
+	public void verdestino (Onibus oni, Passageiro pas);
+	
+	
+	public void verparadas (Onibus oni, Paradas par, Passageiro pas);
 
 }

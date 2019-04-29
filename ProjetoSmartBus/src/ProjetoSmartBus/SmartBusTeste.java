@@ -11,11 +11,11 @@ public class SmartBusTeste {
 	@Test
 	void criarOnibus (){
 		SmartBusTeste S ;
-		ArrayList<Passageiro> passageiro = new ArrayList<Passageiro>
-		Onibus o = o.criarOnibus ("Teste de Daw2", Passageiro);
+		ArrayList<Passageiro> passageiros = new ArrayList<Passageiro>
+		Onibus o = o.criarOnibus ("Teste de Daw2", passageiros);
 		assertNotNull (o);
-		assertEquals("Teste Daw2", o.getClass();
+		assertEquals("Teste Daw2", o.getClass());
 		
 	}
 
-}
+}  
