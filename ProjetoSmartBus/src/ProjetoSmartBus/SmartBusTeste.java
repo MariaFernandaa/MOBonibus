@@ -10,9 +10,9 @@ import org.junit.Test;
 public class SmartBusTeste {
 	@Test
 	void criarOnibus (){
-		SmartBusTeste S ;
-		ArrayList<Passageiro> passageiros = new ArrayList<Passageiro>
-		Onibus o = o.criarOnibus ("Teste de Daw2", passageiros);
+		InterfaceSmartBus S ;
+		ArrayList<Passageiro> passageiros = new ArrayList<Passageiro>();
+		Onibus o = S.criarOnibus();
 		assertNotNull (o);
 		assertEquals("Teste Daw2", o.getClass());
 		
