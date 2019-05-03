@@ -1,5 +1,7 @@
 package ProjetoSmartBus;
 
+import java.sql.Time;
+import java.util.Date;
 import java.util.List;
 
 public interface InterfaceSmartBus {
@@ -7,13 +9,13 @@ public interface InterfaceSmartBus {
 	public Onibus criarOnibus (String horario, List<Passageiro> Passageiros) 
 									throws HorarioNaoExisteException, PassageiroBloqueadException;
 	
-	public void verhorario (Passageiro pas, Onibus oni);
+	public List<Time> verhorario (Paradas x, Date data);
 	
 	
-	public void verpreco (Passageiro pas, Onibus oni);
+	public double verpreco (Paradas x);
 	
 	
-	public void verdestino (Onibus oni, Passageiro pas);
+
 	
 	
 	public void verparadas (Onibus oni, Paradas par, Passageiro pas);

@@ -3,18 +3,31 @@ package ProjetoSmartBus;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
+import java.sql.Time;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 import org.junit.Test;
 
 public class SmartBusTeste {
 	@Test
 	void criarOnibus () throws HorarioNaoExisteException, PassageiroBloqueadException{
-		InterfaceSmartBus S ;
+		InterfaceSmartBus s  = null;
 		ArrayList<Passageiro> passageiros = new ArrayList<Passageiro>();
-		Onibus o = S.criarOnibus("", passageiros);
+		Onibus o = s.criarOnibus("", passageiros);
 		assertNotNull (o);
 		assertEquals("Teste Daw2", o.getClass());
+		
+	}
+	
+	
+	@Test
+	void testeVerHorario() {
+		InterfaceSmartBus i = null;
+		Paradas x = new Paradas();
+		List<Time> horarios = i.verhorario(x, new Date());
+		assertNotNull(horarios);
 		
 	}
 
