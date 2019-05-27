@@ -14,13 +14,6 @@ public class Paradas {
 	private Date hora_de_chegada;
 	private Date hora_de_saida;
 
-	public Paradas(int id_paradas, double localização, Date hora_de_chegada, Date hora_de_saida) {
-		super();
-		this.id_paradas = id_paradas;
-		this.localização = localização;
-		this.hora_de_chegada = hora_de_chegada;
-		this.hora_de_saida = hora_de_saida;
-	}
 	
 	public int getId_paradas() {
 		return id_paradas;
