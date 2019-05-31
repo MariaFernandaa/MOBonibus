@@ -1,4 +1,4 @@
-package ProjetoSmartBus;
+package br.edu.ifpb.esperanca.daw2.SmartBus.DAO;
 
 import java.util.List;
 
@@ -6,6 +6,8 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+
+import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Identificavel;
 
 
 @ApplicationScoped

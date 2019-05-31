@@ -1,4 +1,4 @@
-package ProjetoSmartBus;
+package br.edu.ifpb.esperanca.daw2.SmartBus.entities;
 
 import java.sql.Time;
 import java.util.Date;
