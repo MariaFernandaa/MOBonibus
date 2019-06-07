@@ -1,11 +1,13 @@
-package br.edu.ifpb.esperanca.daw2.SmartBus.DAO;
+package br.edu.ifpb.esperanca.daw2.SmartBus.Service;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
-import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Onibus;
+import br.edu.ifpb.esperanca.daw2.SmartBus.DAO.ParadasDAO;
+import br.edu.ifpb.esperanca.daw2.SmartBus.DAO.TransacionalCdi;
 import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Paradas;
 
 @ApplicationScoped
@@ -38,10 +40,13 @@ private static final long serialVersionUID = -7803325791425670859L;
 	public Paradas getByID(long parId)  {
 			return parDAO.getByID(parId);
 	}
+	@Override
+	public List<Paradas> getAll() {
+			return parDAO.getAll();
+	}
 
 	
-
 }
 
 
-}
+

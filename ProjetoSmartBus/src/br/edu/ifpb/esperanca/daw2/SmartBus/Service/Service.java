@@ -1,4 +1,4 @@
-package br.edu.ifpb.esperanca.daw2.SmartBus.DAO;
+package br.edu.ifpb.esperanca.daw2.SmartBus.Service;
 
 import java.util.List;
 

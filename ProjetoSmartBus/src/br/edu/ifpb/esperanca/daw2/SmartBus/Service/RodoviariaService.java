@@ -2,16 +2,14 @@ package br.edu.ifpb.esperanca.daw2.SmartBus.Service;
 
 import java.io.Serializable;
 import java.util.List;
-
 import javax.inject.Inject;
-
-import br.edu.ifpb.esperanca.daw2.SmartBus.DAO.PrecosDAO;
+import br.edu.ifpb.esperanca.daw2.SmartBus.DAO.RodoviariaDAO;
 import br.edu.ifpb.esperanca.daw2.SmartBus.DAO.TransacionalCdi;
-import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Precos;
 import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Rodoviaria;
 
 public class RodoviariaService implements Serializable, Service<Rodoviaria> {
 	
+	private static final long serialVersionUID = 1L;
 	@Inject
 	private RodoviariaDAO rodoDAO;
 	
@@ -48,4 +46,4 @@ public class RodoviariaService implements Serializable, Service<Rodoviaria> {
 
 }
 
-}
+
