@@ -2,10 +2,12 @@ package br.edu.ifpb.esperanca.daw2.SmartBus.Service;
 
 import java.io.Serializable;
 import java.util.List;
+
 import javax.inject.Inject;
+
 import br.edu.ifpb.esperanca.daw2.SmartBus.DAO.RodoviariaDAO;
-import br.edu.ifpb.esperanca.daw2.SmartBus.DAO.TransacionalCdi;
 import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Rodoviaria;
+import br.edu.ifpb.esperanca.daw2.SmartBus.util.TransacionalCdi;
 
 public class RodoviariaService implements Serializable, Service<Rodoviaria> {
 	

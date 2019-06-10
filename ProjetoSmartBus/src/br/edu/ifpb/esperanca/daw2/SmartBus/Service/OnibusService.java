@@ -7,8 +7,8 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
 import br.edu.ifpb.esperanca.daw2.SmartBus.DAO.OnibusDAO;
-import br.edu.ifpb.esperanca.daw2.SmartBus.DAO.TransacionalCdi;
 import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Onibus;
+import br.edu.ifpb.esperanca.daw2.SmartBus.util.TransacionalCdi;
 
 @ApplicationScoped
 public class OnibusService implements Serializable, Service<Onibus> {

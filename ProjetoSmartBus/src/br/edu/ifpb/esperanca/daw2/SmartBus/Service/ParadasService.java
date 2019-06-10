@@ -7,8 +7,8 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
 import br.edu.ifpb.esperanca.daw2.SmartBus.DAO.ParadasDAO;
-import br.edu.ifpb.esperanca.daw2.SmartBus.DAO.TransacionalCdi;
 import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Paradas;
+import br.edu.ifpb.esperanca.daw2.SmartBus.util.TransacionalCdi;
 
 @ApplicationScoped
 public class ParadasService implements Serializable, Service<Paradas> {
