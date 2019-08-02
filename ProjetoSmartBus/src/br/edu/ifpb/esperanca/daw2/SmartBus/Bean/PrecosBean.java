@@ -1,20 +1,18 @@
 	package br.edu.ifpb.esperanca.daw2.SmartBus.Bean;
 
-	import java.util.Collection;
+import java.io.Serializable;
+import java.util.Collection;
 
-	import javax.annotation.PostConstruct;
-	import javax.inject.Inject;
+import javax.annotation.PostConstruct;
+import javax.inject.Inject;
 
-	import br.edu.ifpb.esperanca.daw2.SmartBus.Service.ParadasService;
-	import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Paradas;
-	import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Precos;
+import br.edu.ifpb.esperanca.daw2.SmartBus.Service.PrecoService;
+import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Precos;
 
-	public class PrecosBean {
-
-		private static final Precos Precos = null;
-
+public class PrecosBean implements Serializable {
+		
 		@Inject
-		private PrecosService service;
+		private PrecoService service;
 
 		protected Precos entidade;
 
@@ -35,7 +33,7 @@
 		}
 
 		public Precos getEntidade() {
-			return Precos;
+			return entidade;
 		}
 
 		public void setEntidade(Precos entidade) {
@@ -69,13 +67,13 @@
 			return new Precos();
 		}
 
-		public PrecosService getService() {
+		public PrecoService getService() {
 			return service;
 		}
-
 
 	}
 
 
+	
 
 

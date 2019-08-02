@@ -63,5 +63,3 @@ protected E entidade;
 	protected abstract E newEntidade();
 	
 }
-
-}

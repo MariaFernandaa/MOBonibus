@@ -1,7 +1,7 @@
 package br.edu.ifpb.esperanca.daw2.SmartBus.Bean;
 
-import br.edu.ifpb.esperanca.daw2.SmartBus.entities.*;
-import br.edu.ifpb.esperanca.daw2.SmartBus.Service.*;
+import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Onibus;
+import br.edu.ifpb.esperanca.daw2.SmartBus.Service.OnibusService;
 import java.io.Serializable;
 import java.util.Collection;
 
@@ -10,13 +10,6 @@ import javax.inject.Inject;
 
 public class OnibusBean implements Serializable {
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-	private static final Onibus Onibus = null;
-
 	@Inject
 	private OnibusService service;
 
@@ -39,7 +32,7 @@ public class OnibusBean implements Serializable {
 	}
 
 	public Onibus getEntidade() {
-		return Onibus;
+		return entidade;
 	}
 
 	public void setEntidade(Onibus entidade) {
@@ -76,6 +69,5 @@ public class OnibusBean implements Serializable {
 	public OnibusService getService() {
 		return service;
 	}
-
 
 }

@@ -12,14 +12,15 @@ public interface Service<E extends Identificavel> {
 
 		void update(E e);
 
-
+		void remove(E e);
+		
 		E getByID(long userId);
 
 		List<E> getAll();
 
 	
 
-		void remove(Paradas entidade);
+		
 
 	}
 

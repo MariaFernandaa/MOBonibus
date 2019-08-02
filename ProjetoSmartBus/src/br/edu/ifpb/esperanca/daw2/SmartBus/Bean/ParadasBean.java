@@ -1,16 +1,16 @@
 package br.edu.ifpb.esperanca.daw2.SmartBus.Bean;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
+
 import br.edu.ifpb.esperanca.daw2.SmartBus.Service.ParadasService;
 import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Paradas;
 
-public class ParadasBean {
-
-	private static final Paradas Paradas = null;
-
+public class ParadasBean implements Serializable {
+	
 	@Inject
 	private ParadasService service;
 
@@ -33,7 +33,7 @@ public class ParadasBean {
 	}
 
 	public Paradas getEntidade() {
-		return Paradas;
+		return entidade;
 	}
 
 	public void setEntidade(Paradas entidade) {
@@ -71,7 +71,5 @@ public class ParadasBean {
 		return service;
 	}
 
-
 }
-
 

@@ -1,19 +1,20 @@
 package br.edu.ifpb.esperanca.daw2.SmartBus.Bean;
 
-import br.edu.ifpb.esperanca.daw2.SmartBus.Service.*;
-import br.edu.ifpb.esperanca.daw2.SmartBus.entities.*;
 import java.io.Serializable;
 import java.util.Collection;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
+import br.edu.ifpb.esperanca.daw2.SmartBus.Service.PassageiroService;
+import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Passageiro;
+
 public class PassageiroBean implements Serializable {
 	
 	@Inject
-	private PassageiroService Passageiro;
+	private PassageiroService service;
 
-	protected Passageiro passageiro;
+	protected Passageiro entidade;
 
 	protected Collection<Passageiro> entidades;
 
@@ -22,21 +23,21 @@ public class PassageiroBean implements Serializable {
 	
 	@PostConstruct
 	public void init() {
-		Passageiro = newPassageiro ();
-		entidades = getPassageiroService().getAll();
+		entidade = newEntidade();
+		entidades = getService().getAll();
 	}
 
-	public void remove(Passageiro passageiro) {
-		getService().remove(passageiro);
+	public void remove(Passageiro entidade) {
+		getService().remove(entidade);
 		limpar();
 	}
 
 	public Passageiro getEntidade() {
-		return passageiro;
+		return entidade;
 	}
 
-	public void setEntidade(PassageiroBean entidade) {
-		this.passageiro = passageiro;
+	public void setEntidade(Passageiro entidade) {
+		this.entidade = entidade;
 	}
 
 	public Collection<Passageiro> getEntidades() {
@@ -48,7 +49,7 @@ public class PassageiroBean implements Serializable {
 	}
 
 	public void save() {
-		getService().save(passageiro);
+		getService().save(entidade);
 		limpar();
 	}
 
@@ -59,7 +60,7 @@ public class PassageiroBean implements Serializable {
 
 	public void limpar() {
 		entidades = getService().getAll();
-		passageiro = newEntidade();
+		entidade = newEntidade();
 	}
 
 	protected Passageiro newEntidade() {
@@ -67,7 +68,7 @@ public class PassageiroBean implements Serializable {
 	}
 
 	public PassageiroService getService() {
-		return PasageiroService;
+		return service;
 	}
 
 }
