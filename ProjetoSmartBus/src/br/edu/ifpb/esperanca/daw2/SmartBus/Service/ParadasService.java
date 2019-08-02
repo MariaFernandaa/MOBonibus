@@ -7,6 +7,7 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
 import br.edu.ifpb.esperanca.daw2.SmartBus.DAO.ParadasDAO;
+import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Onibus;
 import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Paradas;
 import br.edu.ifpb.esperanca.daw2.SmartBus.util.TransacionalCdi;
 
@@ -32,8 +33,8 @@ private static final long serialVersionUID = -7803325791425670859L;
 
 	@Override
 	@TransacionalCdi
-	public void remove(Paradas par) {
-		parDAO.remove(par);
+	public void remove(Paradas entidade) {
+		parDAO.remove(entidade);
 	}
 
 	@Override
@@ -43,6 +44,11 @@ private static final long serialVersionUID = -7803325791425670859L;
 	@Override
 	public List<Paradas> getAll() {
 			return parDAO.getAll();
+	}
+
+	public void remove(Onibus entidade) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	

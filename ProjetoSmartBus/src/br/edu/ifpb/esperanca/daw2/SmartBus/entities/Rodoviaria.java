@@ -11,13 +11,6 @@ public class Rodoviaria extends Identificavel {
 	private String cronograma;
 	private double localização;
 
-	public Rodoviaria(Long id, String cronograma, double localização) {
-		super();
-		this.id = id;
-		this.cronograma = cronograma;
-		this.localização = localização;
-	}
-	
 	public Long getId() {
 		return id;
 	}
