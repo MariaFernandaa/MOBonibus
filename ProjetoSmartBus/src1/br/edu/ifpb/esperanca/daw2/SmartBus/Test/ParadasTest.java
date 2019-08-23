@@ -14,7 +14,7 @@ public class ParadasTest {
 
 		Paradas pr = new Paradas();
 		pr.setId(0L);
-		pr.setLocalizacao(10);
+		pr.setLocalização(10);
 		
 		ParadasService service = new  ParadasService();
 		service.save(pr);
@@ -22,15 +22,15 @@ public class ParadasTest {
 		Paradas pr2 = service.getByID(0L);
 		
 		assertEquals(pr2, pr);
-		assertEquals(10, pr2.getLocalizacao());
+		assertEquals(10, pr2.getLocalização());
 		
-		pr2.setLocalizacao(12);
+		pr2.setLocalização(12);
 		
 		service.update(pr2);
 		
 		Paradas pr3 = service.getByID(0L);
 		
-		assertEquals(12, pr3.getLocalizacao());
+		assertEquals(12, pr3.getLocalização());
 		
 		service.remove(pr3);
 		

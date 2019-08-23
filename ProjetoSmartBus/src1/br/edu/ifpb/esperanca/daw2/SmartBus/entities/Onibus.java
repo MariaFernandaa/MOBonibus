@@ -1,6 +1,4 @@
 package br.edu.ifpb.esperanca.daw2.SmartBus.entities;
-import java.sql.Date;
-import java.util.ArrayList;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -14,7 +12,7 @@ public class Onibus extends Identificavel {
 	@Id
 	private Long id;
 	private int quantPassageiro;
-	private Date horario;
+	private int horario;
 	private String destino;
 	
 	@ManyToMany
@@ -41,12 +39,12 @@ public class Onibus extends Identificavel {
 		this.quantPassageiro = quantPassageiro;
 	}
 
-	public Date getHorario() {
+	public int getHorario() {
 		return horario;
 	}
 
-	public void setHorario(Date horario) {
-		this.horario = horario;
+	public void setHorario(int i) {
+		this.horario = i;
 	}
 
 	public String getDestino() {

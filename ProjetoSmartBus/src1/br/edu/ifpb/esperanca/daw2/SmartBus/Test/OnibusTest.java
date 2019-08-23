@@ -18,6 +18,7 @@ public class OnibusTest {
 		o.setDestino("João Pessoa");
 		
 		OnibusService service = new  OnibusService();
+		Onibus p = null;
 		service.save(p);
 		
 		Onibus o2 = service.getByID(0L);
