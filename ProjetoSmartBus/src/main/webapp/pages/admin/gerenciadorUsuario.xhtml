@@ -4,7 +4,7 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
-	<title>Gerenciador de Usuários</title>
+	<title>Gerenciador de Passageiro</title>
 </h:head>
 
 
@@ -21,16 +21,16 @@
 			</f:facet>
 
 			<p:outputLabel value="Nome: " for="nomeField" />
-			<p:inputText id="nomeField" value="#{usuarioBean.entidade.nome}"
+			<p:inputText id="nomeField" value="#{passageiroBean.entidade.nome}"
 				label="Nome" style="width:350px" />
 
 			<p:outputLabel value="E-mail: " for="emailField" />
-			<p:inputText id="emailField" value="#{usuarioBean.entidade.email}"
+			<p:inputText id="emailField" value="#{passageiroBean.entidade.email}"
 				label="Nome" style="width:350px" />
 
 			<p:outputLabel value="Nascimento: " for="nascimentoField" />
-			<p:calendar id="nascimentoField"
-				value="#{usuarioBean.entidade.nascimento}" label="Nascimento" />
+			<p:inputText id="nascimentoField"
+				value="#{passageiroBean.entidade.idade}" label="Idade" />
 
 			<p:commandButton id="btnNovo" value="Novo"
 				action="#{usuarioBean.save()}" ajax="false" />
