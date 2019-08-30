@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Gerenciador de Paradas</title>
+</h:head>
+
+<h:body>
+	<p:messages />
+
+	<h:form>
+		<p:panelGrid columns="2" >
+			<f:facet name="caption">
+				<h:outputText value="Filtros" />
+			</f:facet>
+			<f:facet name="header">
+				<h:outputText value="Paradas" />
+			</f:facet>
+
+			<p:outputLabel value="localizaçao: " for="localizaçaoField" />
+			<p:inputText id="localizaçaoField" value="#{ParadasBean.entidade.localizaçao}"
+				label="localizaçao" style="width:350px" />
+
+
+			<p:commandButton id="btnNovo" value="Novo"
+				action="#{ParadasBean.save()}" ajax="false" />
+			<p:commandButton id="btnLimpar" value="Limpar"
+				action="#{ParadasBean.limpar()}" ajax="false" />
+		</p:panelGrid>
+
+
+		<p:dataTable id="dataTableEntidades" border="1" var="entidade"
+			value="#{ParadasBean.entidades}">
+			
+				<f:facet localizaçao="header">localizacao</f:facet>
+				<h:outputText value="#{entidade.localizaçao}" />
+			</p:column>
+			<p:column>
+				<f:facet localizaçao="header">Opções</f:facet>
+				<p:commandButton value="Remover" ajax="false"
+					action="#{ParadasBean.remove(entidade)}"></p:commandButton>
+				<p:commandButton value="Editar" ajax="false"
+					action="#{ParadasBean.editar(entidade.localizaçao)}"></p:commandButton>
+			</p:column>
+		</p:dataTable>
+	</h:form>
+</h:body>
+</html>

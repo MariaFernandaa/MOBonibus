@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Gerenciador de Rodoviaria</title>
+</h:head>
+
+
+<h:body>
+	<p:messages />
+
+	<h:form>
+		<p:panelGrid columns="2" >
+			<f:facet name="caption">
+				<h:outputText value="Filtros" />
+			</f:facet>
+			<f:facet name="header">
+				<h:outputText value="Rodoviaria" />
+			</f:facet>
+
+			<p:outputLabel value="cronograma: " for="cronogramaField" />
+			<p:inputText id="cronogramaField" value="#{RodoviariaBean.entidade.cronograma}"
+				label="Cronograma" style="width:350px" />
+
+			<p:outputLabel value="localizaçao: " for="localizaçaoField" />
+			<p:inputText id="localizaçaolField" value="#{rodoviariaBean.entidade.cronograma}"
+				label="localizaçao" style="width:350px" />
+
+			<p:commandButton id="btnNovo" value="Novo"
+				action="#{rodoviariaBean.save()}" ajax="false" />
+			<p:commandButton id="btnLimpar" value="Limpar"
+				action="#{rodoviariaBean.limpar()}" ajax="false" />
+		</p:panelGrid>
+
+
+		<p:dataTable id="dataTableEntidades" border="1" var="entidade"
+			value="#{rodoviariaBean.entidades}">
+			<p:column>
+				<f:facet cronograma="header">cronograma</f:facet>
+				<h:outputText value="#{entidade.cronograma}" />
+			</p:column>
+			<p:column>
+				<f:facet localizaçao="header">localizaçao</f:facet>
+				<h:outputText value="#{entidade.localizaçao}" />
+			</p:column>
+			<p:column>
+				<
+		</p:dataTable>
+	</h:form>
+</h:body>
+</html>

@@ -4,7 +4,7 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
-	<title> Perfil </title>
+	<title> Gerenciador de Onibus </title>
 </h:head>
 
 
@@ -17,30 +17,30 @@
 				<h:outputText value="Filtros" />
 			</f:facet>
 			<f:facet name="header">
-				<h:outputText value="Usuário" />
+				<h:outputText value="Onibus" />
 			</f:facet>
 
-			<p:outputLabel value="Nome: " for="nomeField" />
-			<p:inputText id="nomeField" value="#{passageiroBean.entidade.nome}"
+			<p:outputLabel value="Horario: " for="horarioField" />
+			<p:inputText id="horarioField" value="#{onibusBean.entidade.horario}"
 				label="Nome" style="width:350px" />
 
-			<p:outputLabel value="E-mail: " for="emailField" />
-			<p:inputText id="emailField" value="#{passageiroBean.entidade.email}"
+			<p:outputLabel value="Destino: " for="destinoField" />
+			<p:inputText id="emailField" value="#{onibusBean.entidade.destino}"
 				label="Nome" style="width:350px" />
-
-		<p:outputLabel value="Nascimento: " for="nascimentoField" />
-			<p:inputText id="nascimentoField"
-				value="#{passageiroBean.entidade.idade}" label="Idade" />
+				
+				<p:outputLabel value="QntPassageiro: " for="qntpassageiroField" />
+			<p:inputText id="qntpassageiroField"
+				value="#{OnibusBean.entidade.idade}" label="QntPassageiro" />
 
 			<p:commandButton id="btnNovo" value="Novo"
-				action="#{passageiroBean.save()}" ajax="false" />
+				action="#{OnibusBean.save()}" ajax="false" />
 			<p:commandButton id="btnLimpar" value="Limpar"
-				action="#{passageiroBean.limpar()}" ajax="false" />
+				action="#{OnibusBean.limpar()}" ajax="false" />
 		</p:panelGrid>
 
 
 		<p:dataTable id="dataTableEntidades" border="1" var="entidade"
-			value="#{passageiroBean.entidades}">
+			value="#{OnibusBean.entidades}">
 			<p:column>
 				<f:facet name="header">ID</f:facet>
 				<h:outputText value="#{entidade.id}" />
@@ -62,9 +62,9 @@
 			<p:column>
 				<f:facet name="header">Opções</f:facet>
 				<p:commandButton value="Remover" ajax="false"
-					action="#{passageiroBean.remove(entidade)}"></p:commandButton>
+					action="#{usuarioBean.remove(entidade)}"></p:commandButton>
 				<p:commandButton value="Editar" ajax="false"
-					action="#{passageiroBean.editar(entidade.id)}"></p:commandButton>
+					action="#{usuarioBean.editar(entidade.id)}"></p:commandButton>
 			</p:column>
 		</p:dataTable>
 	</h:form>

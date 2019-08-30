@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Gerenciador de Preco </title>
+</h:head>
+
+
+<h:body>
+	<p:messages />
+
+	<h:form>
+		<p:panelGrid columns="2" >
+			<f:facet name="caption">
+				<h:outputText value="Filtros" />
+			</f:facet>
+			<f:facet name="header">
+				<h:outputText value="Preco" />
+			</f:facet>
+
+			<p:outputLabel value="Distancia: " for="distanciaField" />
+			<p:inputText id="distanciaField" value="#{precoBean.entidade.distancia}"
+				label="distancia" style="width:350px" />
+
+			<p:outputLabel value="interia: " for="inteiraField" />
+			<p:inputText id="inteiraField" value="#{precoBean.entidade.preço}"
+				label="inteiro" style="width:350px" />
+
+			<p:outputLabel value="meia: " for="meiaField" />
+			<p:inputText id="meiaField"
+				value="#{precoBean.entidade.idade}" label="meia" />
+
+			<p:commandButton id="btnNovo" value="Novo"
+				action="#{precoBean.save()}" ajax="false" />
+			<p:commandButton id="btnLimpar" value="Limpar"
+				action="#{precoBean.limpar()}" ajax="false" />
+		</p:panelGrid>
+
+
+		<p:dataTable id="dataTableEntidades" border="1" var="entidade"
+			value="#{precoBean.entidades}">
+			<p:column>
+				<f:facet name="header">ID</f:facet>
+				<h:outputText value="#{entidade.id}" />
+			</p:column>
+			<p:column>
+				<f:facet name="header">distancia</f:facet>
+				<h:outputText value="#{entidade.distancia}" />
+			</p:column>
+			<p:column>
+				<f:facet name="header">inteira</f:facet>
+				<h:outputText value="#{entidade.inteira}" />
+			</p:column>
+			<p:column>
+				<f:facet name="header">meia</f:facet>
+				<h:outputText value="#{entidade.meia}">
+					<f:convertDateTime pattern="dd/MM/yyyy" />
+				</h:outputText>
+			</p:column>
+			<p:column>
+				<f:facet name="header">Opções</f:facet>
+				<p:commandButton value="Remover" ajax="false"
+					action="#{precoBean.remove(entidade)}"></p:commandButton>
+				<p:commandButton value="Editar" ajax="false"
+					action="#{precoBean.editar(entidade.id)}"></p:commandButton>
+			</p:column>
+		</p:dataTable>
+	</h:form>
+</h:body>
+</html>
