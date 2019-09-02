@@ -1,3 +1,4 @@
+
 package br.edu.ifpb.esperanca.daw2.SmartBus.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -15,7 +16,7 @@ public class OnibusTest {
 		Onibus o = new Onibus();
 		o.setId(0L);
 		o.setHorario(1969-12-31);
-		o.setDestino("João Pessoa");
+		o.setDestino("Joï¿½o Pessoa");
 		
 		OnibusService service = new  OnibusService();
 		Onibus p = null;

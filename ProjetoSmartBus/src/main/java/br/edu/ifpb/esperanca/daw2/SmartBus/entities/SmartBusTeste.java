@@ -1,3 +1,4 @@
+
 package br.edu.ifpb.esperanca.daw2.SmartBus.entities;
 
 import static org.junit.Assert.assertEquals;
