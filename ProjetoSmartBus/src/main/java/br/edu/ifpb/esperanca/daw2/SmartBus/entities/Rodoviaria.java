@@ -9,7 +9,7 @@ public class Rodoviaria extends Identificavel {
 	@Id
 	private Long id;
 	private String cronograma;
-	private double localização;
+	private double localizacao;
 
 	public Long getId() {
 		return id;
@@ -25,11 +25,11 @@ public class Rodoviaria extends Identificavel {
 		this.cronograma = cronograma;
 	}
 	
-	public double getLocalização() {
-		return localização;
+	public double getLocalizacao() {
+		return localizacao;
 	}
-	public void setLocalização(double localização) {
-		this.localização = localização;
+	public void setLocalizacao(double localizacao) {
+		this.localizacao = localizacao;
 	}
 
 

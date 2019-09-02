@@ -13,7 +13,7 @@ public class Paradas extends Identificavel{
 	
 	@Id
 	private Long id;
-	private double localização;
+	private double localizacao;
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	private Calendar hora_de_chegada;
@@ -29,11 +29,11 @@ public class Paradas extends Identificavel{
 		this.id = id;
 	}
 	
-	public double getLocalização() {
-		return localização;
+	public double getLocalizacao() {
+		return localizacao;
 	}
-	public void setLocalização(double localização) {
-		this.localização = localização;
+	public void setLocalizacao(double localizacao) {
+		this.localizacao = localizacao;
 	}
 	
 	public Calendar getHora_de_chegada() {

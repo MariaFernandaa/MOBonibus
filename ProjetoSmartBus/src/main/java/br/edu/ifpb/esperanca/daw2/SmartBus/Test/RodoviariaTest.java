@@ -15,7 +15,7 @@ package br.edu.ifpb.esperanca.daw2.SmartBus.Test;
 			Rodoviaria ro = new Rodoviaria();
 			ro.setId(0L);
 			ro.setCronograma("12/09");
-			ro.setLocalização(10);
+			ro.setLocalizacao(10);
 			
 			RodoviariaService service = new  RodoviariaService();
 			service.save(ro);
@@ -26,7 +26,7 @@ package br.edu.ifpb.esperanca.daw2.SmartBus.Test;
 			assertEquals("12/09", ro.getCronograma());
 			
 			ro2.setCronograma("15/09");
-			ro2.setLocalização(6);
+			ro2.setLocalizacao(6);
 			
 			service.update(ro2);
 			

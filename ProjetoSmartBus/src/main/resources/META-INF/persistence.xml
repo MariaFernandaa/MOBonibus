@@ -9,9 +9,9 @@
 		<class>br.edu.ifpb.esperanca.daw2.ifoto.entities.Comentario</class>
 	
 		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/ifoto"/>
-			<property name="javax.persistence.jdbc.user" value="ifotouser"/>
-			<property name="javax.persistence.jdbc.password" value="ifotopassword"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://192.168.4.170:5432/mariafernandaa"/>
+			<property name="javax.persistence.jdbc.user" value="mariafernandaa"/>
+			<property name="javax.persistence.jdbc.password" value="MariaFernanda"/>
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
 			<property name="hibernate.hbm2ddl.auto" value="create" />
 			<property name="hibernate.show_sql" value="true" />

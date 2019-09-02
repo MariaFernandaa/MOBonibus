@@ -13,7 +13,7 @@ public class Precos extends Identificavel {
 	
 	@Id
 	private Long id;
-	private int distância;
+	private int distancia;
 	private int inteira;
 	private int meia;
 	
@@ -29,12 +29,12 @@ public class Precos extends Identificavel {
 		this.id = id;
 	}
 
-	public int getDistância() {
-		return distância;
+	public int getDistancia() {
+		return distancia;
 	}
 
-	public void setDistância(int distância) {
-		this.distância = distância;
+	public void setDistancia(int distancia) {
+		this.distancia = distancia;
 	}
 
 	public int getInteira() {

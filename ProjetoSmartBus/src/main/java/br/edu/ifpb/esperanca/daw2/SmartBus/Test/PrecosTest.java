@@ -17,7 +17,7 @@ public class PrecosTest {
 		p.setId(0L);
 		p.setInteira(10);
 		p.setMeia(5);
-		p.setDistância(10);
+		p.setDistancia(10);
 		
 		PrecoService service = new  PrecoService();
 		service.save(p);
