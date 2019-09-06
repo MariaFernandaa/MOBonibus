@@ -17,54 +17,45 @@
 				<h:outputText value="Filtros" />
 			</f:facet>
 			<f:facet name="header">
-				<h:outputText value="Usuário" />
+				<h:outputText value="Rodoviaria" />
 			</f:facet>
 
-			<p:outputLabel value="Nome: " for="nomeField" />
-			<p:inputText id="nomeField" value="#{passageiroBean.entidade.nome}"
-				label="Nome" style="width:350px" />
+			<p:outputLabel value="Cronograma: " for="cronogramaField" />
+			<p:inputText id="cronogramaField" value="#{rodoviariaBean.entidade.cronograma}"
+				label="Cronograma" style="width:350px" />
 
-			<p:outputLabel value="E-mail: " for="emailField" />
-			<p:inputText id="emailField" value="#{passageiroBean.entidade.email}"
-				label="Nome" style="width:350px" />
+			<p:outputLabel value="Localizacao: " for="localizacaoField" />
+			<p:inputText id="LocalizacaoField" value="#{rodoviariaBean.entidade.localizacao}"
+				label="Locolizacao" style="width:350px" />
 
-		<p:outputLabel value="Nascimento: " for="nascimentoField" />
-			<p:inputText id="nascimentoField"
-				value="#{passageiroBean.entidade.idade}" label="Idade" />
 
 			<p:commandButton id="btnNovo" value="Novo"
-				action="#{passageiroBean.save()}" ajax="false" />
+				action="#{rodoviariaBean.save()}" ajax="false" />
 			<p:commandButton id="btnLimpar" value="Limpar"
-				action="#{passageiroBean.limpar()}" ajax="false" />
+				action="#{rodoviariaBean.limpar()}" ajax="false" />
 		</p:panelGrid>
 
 
 		<p:dataTable id="dataTableEntidades" border="1" var="entidade"
-			value="#{passageiroBean.entidades}">
+			value="#{precosBean.entidades}">
 			<p:column>
 				<f:facet name="header">ID</f:facet>
 				<h:outputText value="#{entidade.id}" />
 			</p:column>
 			<p:column>
-				<f:facet name="header">Nome</f:facet>
+				<f:facet name="header">Cronograma</f:facet>
 				<h:outputText value="#{entidade.nome}" />
 			</p:column>
 			<p:column>
-				<f:facet name="header">Email</f:facet>
+				<f:facet name="header">Localizacao</f:facet>
 				<h:outputText value="#{entidade.email}" />
-			</p:column>
-			<p:column>
-				<f:facet name="header">Nascimento</f:facet>
-				<h:outputText value="#{entidade.nascimento}">
-					<f:convertDateTime pattern="dd/MM/yyyy" />
-				</h:outputText>
 			</p:column>
 			<p:column>
 				<f:facet name="header">Opções</f:facet>
 				<p:commandButton value="Remover" ajax="false"
-					action="#{passageiroBean.remove(entidade)}"></p:commandButton>
+					action="#{rodoviariaBean.remove(entidade)}"></p:commandButton>
 				<p:commandButton value="Editar" ajax="false"
-					action="#{passageiroBean.editar(entidade.id)}"></p:commandButton>
+					action="#{rodoviariaBean.editar(entidade.id)}"></p:commandButton>
 			</p:column>
 		</p:dataTable>
 	</h:form>

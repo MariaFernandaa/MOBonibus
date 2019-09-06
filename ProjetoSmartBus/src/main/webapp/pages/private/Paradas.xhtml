@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title> Perfil </title>
+</h:head>
+
+
+<h:body>
+	<p:messages />
+
+	<h:form>
+		<p:panelGrid columns="2" >
+			<f:facet name="caption">
+				<h:outputText value="Filtros" />
+			</f:facet>
+			<f:facet name="header">
+				<h:outputText value="Paradas" />
+			</f:facet>
+
+			<p:outputLabel value="Localizacao: " for="localizacaoField" />
+			<p:inputText id="localizacaoField" value="#{paradasBean.entidade.localizacao}"
+				label="Localizacao" style="width:350px" />
+
+
+			<p:commandButton id="btnNovo" value="Novo"
+				action="#{paradasBean.save()}" ajax="false" />
+			<p:commandButton id="btnLimpar" value="Limpar"
+				action="#{paradasBean.limpar()}" ajax="false" />
+		</p:panelGrid>
+
+
+		<p:dataTable id="dataTableEntidades" border="1" var="entidade"
+			value="#{paradasBean.entidades}">
+			<p:column>
+				<f:facet name="header">ID</f:facet>
+				<h:outputText value="#{entidade.id}" />
+			</p:column>
+			<p:column>
+				<f:facet name="header">Localizacao</f:facet>
+				<h:outputText value="#{entidade.nome}" />
+			</p:column>
+			<p:column>
+				<f:facet name="header">Opções</f:facet>
+				<p:commandButton value="Remover" ajax="false"
+					action="#{paradasBean.remove(entidade)}"></p:commandButton>
+				<p:commandButton value="Editar" ajax="false"
+					action="#{paradasBean.editar(entidade.id)}"></p:commandButton>
+			</p:column>
+		</p:dataTable>
+	</h:form>
+</h:body>
+</html>
