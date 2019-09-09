@@ -1,8 +1,18 @@
 
 package br.edu.ifpb.esperanca.daw2.SmartBus.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+
+@Entity
 public class Passageiro extends Identificavel {
 	
+	@Id
+	@GeneratedValue(generator="passageiro_seq", strategy=GenerationType.SEQUENCE)
+	@SequenceGenerator(name="passageiro_seq")
 	private Long id;
 	private String nome;
 	private double idade;

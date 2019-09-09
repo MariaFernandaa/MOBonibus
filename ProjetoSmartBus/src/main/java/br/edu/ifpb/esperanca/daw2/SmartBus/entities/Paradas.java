@@ -5,7 +5,10 @@ import java.sql.Date;
 import java.util.Calendar;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -13,6 +16,8 @@ import javax.persistence.TemporalType;
 public class Paradas extends Identificavel{
 	
 	@Id
+	@GeneratedValue(generator="paradas_seq", strategy=GenerationType.SEQUENCE)
+	@SequenceGenerator(name="paradas_seq")
 	private Long id;
 	private double localizacao;
 	

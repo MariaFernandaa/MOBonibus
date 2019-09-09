@@ -1,27 +1,23 @@
 package br.edu.ifpb.esperanca.daw2.SmartBus.Bean;
 
-import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Onibus;
-import br.edu.ifpb.esperanca.daw2.SmartBus.Service.OnibusService;
-import java.io.Serializable;
 import java.util.Collection;
 
 import javax.annotation.PostConstruct;
-import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
-import javax.inject.Named;
 
-@Named
-@ViewScoped
-public class OnibusBean implements Serializable {
+import br.edu.ifpb.esperanca.daw2.SmartBus.Service.RodoviariaService;
+import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Rodoviaria;
+
+public class RodoviariaBean {
 	
 	@Inject
-	private OnibusService service;
+	private RodoviariaService service;
 
-	protected Onibus entidade;
+	protected Rodoviaria entidade;
 
-	protected Collection<Onibus> entidades;
+	protected Collection<Rodoviaria> entidades;
 
-	public OnibusBean() {
+	public RodoviariaBean() {
 	}
 	
 	@PostConstruct
@@ -30,24 +26,24 @@ public class OnibusBean implements Serializable {
 		entidades = getService().getAll();
 	}
 
-	public void remove(Onibus entidade) {
+	public void remove(Rodoviaria entidade) {
 		getService().remove(entidade);
 		limpar();
 	}
 
-	public Onibus getEntidade() {
+	public Rodoviaria getEntidade() {
 		return entidade;
 	}
 
-	public void setEntidade(Onibus entidade) {
+	public void setEntidade(Rodoviaria entidade) {
 		this.entidade = entidade;
 	}
 
-	public Collection<Onibus> getEntidades() {
+	public Collection<Rodoviaria> getEntidades() {
 		return entidades;
 	}
 
-	public void setEntidades(Collection<Onibus> entidades) {
+	public void setEntidades(Collection<Rodoviaria> entidades) {
 		this.entidades = entidades;
 	}
 
@@ -66,11 +62,11 @@ public class OnibusBean implements Serializable {
 		entidade = newEntidade();
 	}
 
-	protected Onibus newEntidade() {
-		return new Onibus();
+	protected Rodoviaria newEntidade() {
+		return new Rodoviaria();
 	}
 
-	public OnibusService getService() {
+	public RodoviariaService getService() {
 		return service;
 	}
 

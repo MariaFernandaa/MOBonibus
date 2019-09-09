@@ -3,7 +3,7 @@ package br.edu.ifpb.esperanca.daw2.SmartBus.entities;
 
 public abstract class Identificavel {
 	
-	
+
 	public abstract Long getId();
 	
 	public abstract void setId(Long id);

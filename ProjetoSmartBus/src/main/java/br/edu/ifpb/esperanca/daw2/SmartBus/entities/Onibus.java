@@ -3,14 +3,19 @@ package br.edu.ifpb.esperanca.daw2.SmartBus.entities;
 import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 public class Onibus extends Identificavel {
 	
 	@Id
+	@GeneratedValue(generator="onibus_seq", strategy=GenerationType.SEQUENCE)
+	@SequenceGenerator(name="onibus_seq")
 	private Long id;
 	private int quantPassageiro;
 	private int horario;

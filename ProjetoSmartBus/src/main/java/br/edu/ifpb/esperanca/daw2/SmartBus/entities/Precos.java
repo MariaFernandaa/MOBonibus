@@ -4,15 +4,20 @@ package br.edu.ifpb.esperanca.daw2.SmartBus.entities;
 import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 
 public class Precos extends Identificavel {
 	
 	@Id
+	@GeneratedValue(generator="precos_seq", strategy=GenerationType.SEQUENCE)
+	@SequenceGenerator(name="precos_seq")
 	private Long id;
 	private int distancia;
 	private int inteira;

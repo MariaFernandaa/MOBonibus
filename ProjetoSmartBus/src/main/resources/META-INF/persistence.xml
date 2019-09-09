@@ -10,12 +10,13 @@
 	
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://192.168.4.170:5432/smartbus"/>
-			<property name="javax.persistence.jdbc.user" value="mariafernandaa"/>
+			<property name="javax.persistence.jdbc.user" value="mariafernanda"/>
 			<property name="javax.persistence.jdbc.password" value="MariaFernanda"/>
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
 			<property name="hibernate.hbm2ddl.auto" value="create" />
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
 		</properties>
 	</persistence-unit>
 </persistence>
