@@ -1,14 +1,15 @@
 package br.edu.ifpb.esperanca.daw2.SmartBus.Bean;
 
-import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Onibus;
-import br.edu.ifpb.esperanca.daw2.SmartBus.Service.OnibusService;
 import java.io.Serializable;
 import java.util.Collection;
 
 import javax.annotation.PostConstruct;
-import javax.faces.bean.ViewScoped;
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+
+import br.edu.ifpb.esperanca.daw2.SmartBus.Service.OnibusService;
+import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Onibus;
 
 @Named
 @ViewScoped

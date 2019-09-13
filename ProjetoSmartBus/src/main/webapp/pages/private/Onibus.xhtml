@@ -47,17 +47,15 @@
 			</p:column>
 			<p:column>
 				<f:facet name="header">Destino</f:facet>
-				<h:outputText value="#{entidade.nome}" />
+				<h:outputText value="#{entidade.destino}" />
 			</p:column>
 			<p:column>
 				<f:facet name="header">Horario</f:facet>
-				<h:outputText value="#{entidade.email}" />
+				<h:outputText value="#{entidade.horario}" />
 			</p:column>
 			<p:column>
 				<f:facet name="header">QuantPassageiro</f:facet>
-				<h:outputText value="#{entidade.nascimento}">
-					<f:convertDateTime pattern="dd/MM/yyyy" />
-				</h:outputText>
+				<h:outputText value="#{entidade.quantPassageiro}" />
 			</p:column>
 			<p:column>
 				<f:facet name="header">Opções</f:facet>
