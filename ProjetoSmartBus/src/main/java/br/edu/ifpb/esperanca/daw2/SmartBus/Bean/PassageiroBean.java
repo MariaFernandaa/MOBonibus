@@ -4,11 +4,15 @@ import java.io.Serializable;
 import java.util.Collection;
 
 import javax.annotation.PostConstruct;
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
+import javax.inject.Named;
 
 import br.edu.ifpb.esperanca.daw2.SmartBus.Service.PassageiroService;
 import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Passageiro;
 
+@ViewScoped
+@Named
 public class PassageiroBean implements Serializable {
 	
 	@Inject

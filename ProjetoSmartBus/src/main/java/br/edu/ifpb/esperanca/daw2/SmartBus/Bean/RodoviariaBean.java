@@ -3,11 +3,15 @@ package br.edu.ifpb.esperanca.daw2.SmartBus.Bean;
 import java.util.Collection;
 
 import javax.annotation.PostConstruct;
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
+import javax.inject.Named;
 
 import br.edu.ifpb.esperanca.daw2.SmartBus.Service.RodoviariaService;
 import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Rodoviaria;
 
+@Named
+@ViewScoped
 public class RodoviariaBean {
 	
 	@Inject

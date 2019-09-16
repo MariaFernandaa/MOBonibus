@@ -4,11 +4,15 @@ import java.io.Serializable;
 import java.util.Collection;
 
 import javax.annotation.PostConstruct;
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
+import javax.inject.Named;
 
 import br.edu.ifpb.esperanca.daw2.SmartBus.Service.ParadasService;
 import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Paradas;
 
+@Named
+@ViewScoped
 public class ParadasBean implements Serializable {
 	
 	@Inject
