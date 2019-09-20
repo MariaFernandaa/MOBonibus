@@ -1,7 +1,6 @@
 
 package br.edu.ifpb.esperanca.daw2.SmartBus.entities;
 
-import java.sql.Date;
 import java.util.Calendar;
 
 import javax.persistence.Entity;

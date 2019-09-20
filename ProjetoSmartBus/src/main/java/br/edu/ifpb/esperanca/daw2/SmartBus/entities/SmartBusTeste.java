@@ -1,18 +1,7 @@
 
 package br.edu.ifpb.esperanca.daw2.SmartBus.entities;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-
-import java.net.InterfaceAddress;
-import java.sql.Time;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
 import org.junit.Test;
-
-import br.edu.ifpb.esperanca.daw2.SmartBus.Bean.PassageiroBean;
 
 public class SmartBusTeste {
 	@Test

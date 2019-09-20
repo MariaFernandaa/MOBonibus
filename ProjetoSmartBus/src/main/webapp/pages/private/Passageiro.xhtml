@@ -28,9 +28,8 @@
 			<p:inputText id="emailField" value="#{passageiroBean.entidade.email}"
 				label="Nome" style="width:350px" />
 
-		<p:outputLabel value="Nascimento: " for="nascimentoField" />
-			<p:inputText id="nascimentoField"
-				value="#{passageiroBean.entidade.idade}" label="Idade" />
+		<p:outputLabel value="Idade: " for="idadeField" />
+			<p:calendar id="idadeField" value="#{passageiroBean.entidade.idade}" label="nascimento" pattern="dd/MM/yyyy" />
 
 			<p:commandButton id="btnNovo" value="Novo"
 				action="#{passageiroBean.save()}" ajax="false" />
@@ -55,7 +54,7 @@
 			</p:column>
 			<p:column>
 				<f:facet name="header">Nascimento</f:facet>
-				<h:outputText value="#{entidade.nascimento}">
+				<h:outputText value="#{entidade.idade}">
 					<f:convertDateTime pattern="dd/MM/yyyy" />
 				</h:outputText>
 			</p:column>

@@ -1,5 +1,6 @@
 package br.edu.ifpb.esperanca.daw2.SmartBus.Bean;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 import javax.annotation.PostConstruct;
@@ -12,7 +13,7 @@ import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Rodoviaria;
 
 @Named
 @ViewScoped
-public class RodoviariaBean {
+public class RodoviariaBean implements Serializable{
 	
 	@Inject
 	private RodoviariaService service;

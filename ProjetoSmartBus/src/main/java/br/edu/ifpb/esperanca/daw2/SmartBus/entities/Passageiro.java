@@ -1,5 +1,7 @@
-
+ 
 package br.edu.ifpb.esperanca.daw2.SmartBus.entities;
+
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,7 +17,7 @@ public class Passageiro extends Identificavel {
 	@SequenceGenerator(name="passageiro_seq")
 	private Long id;
 	private String nome;
-	private double idade;
+	private Date idade;
 	private String email;
 	
 	public String getNome() {
@@ -24,10 +26,10 @@ public class Passageiro extends Identificavel {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public double getIdade() {
+	public Date getIdade() {
 		return idade;
 	}
-	public void setIdade(double idade) {
+	public void setIdade(Date	 idade) {
 		this.idade = idade;
 	}
 	public String getEmail() {
