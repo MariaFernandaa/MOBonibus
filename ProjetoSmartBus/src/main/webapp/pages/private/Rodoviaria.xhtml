@@ -4,7 +4,7 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
-	<title> Perfil </title>
+	<title> Rodoviaria </title>
 </h:head>
 
 
@@ -25,7 +25,7 @@
 				label="Cronograma" style="width:350px" />
 
 			<p:outputLabel value="Localizacao: " for="localizacaoField" />
-			<p:inputText id="LocalizacaoField" value="#{rodoviariaBean.entidade.localizacao}"
+			<p:inputText id="localizacaoField" value="#{rodoviariaBean.entidade.localizacao}"
 				label="Locolizacao" style="width:350px" />
 
 
@@ -37,18 +37,18 @@
 
 
 		<p:dataTable id="dataTableEntidades" border="1" var="entidade"
-			value="#{precosBean.entidades}">
+			value="#{rodoviariaBean.entidades}">
 			<p:column>
 				<f:facet name="header">ID</f:facet>
 				<h:outputText value="#{entidade.id}" />
 			</p:column>
 			<p:column>
 				<f:facet name="header">Cronograma</f:facet>
-				<h:outputText value="#{entidade.nome}" />
+				<h:outputText value="#{entidade.cronograma}" />
 			</p:column>
 			<p:column>
 				<f:facet name="header">Localizacao</f:facet>
-				<h:outputText value="#{entidade.email}" />
+				<h:outputText value="#{entidade.localizacao}" />
 			</p:column>
 			<p:column>
 				<f:facet name="header">Opções</f:facet>
