@@ -2,6 +2,8 @@
 package br.edu.ifpb.esperanca.daw2.SmartBus.Service;
 
 import java.io.Serializable;
+import java.security.MessageDigest;
+import java.util.Base64;
 import java.util.List;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -23,7 +25,21 @@ private static final long serialVersionUID = -7803325791425670859L;
 	@Override
 	@TransacionalCdi
 	public void save(Passageiro pass) {
+		pass.setSenha(hash(pass.getSenha()));
 		passDAO.save(pass);
+	}
+
+	private String hash(String password) {
+		try {
+			MessageDigest md;
+			md = MessageDigest.getInstance("SHA-256");
+			md.update(password.getBytes("UTF-8"));
+			byte[] digest = md.digest();
+			String output = Base64.getEncoder().encodeToString(digest);
+			return output;
+		} catch (Exception e) {
+			return password;
+		}
 	}
 
 	@Override

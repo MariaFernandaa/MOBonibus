@@ -19,6 +19,15 @@ public class Passageiro extends Identificavel {
 	private String nome;
 	private Date idade;
 	private String email;
+	private String senha;
+	
+	public String getSenha() {
+		return senha;
+	}
+	
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
 	
 	public String getNome() {
 		return nome;

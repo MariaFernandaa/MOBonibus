@@ -1,0 +1,15 @@
+connect
+
+module add --name=org.postgres --resources=C:\Users\Aluno\.m2\repository\org\postgresql\postgresql\9.4.1212\postgresql-9.4.1212.jar --dependencies=javax.api,javax.transaction.api
+
+/subsystem=datasources/jdbc-driver=postgres:add(driver-name="postgres", driver-module-name="org.postgres", driver-class-name="org.postgresql.Driver")
+
+/subsystem=datasources/data-source=PostgreSQLPool:add(driver-name="postgres", jndi-name="java:/smartDS", connection-url="jdbc:postgresql://192.168.4.170:5432/smartbus", user-name="mariafernanda", password="MariaFernanda")
+
+/subsystem=security/security-domain=smartJdbcRealm/:add(cache-type=default)
+
+/subsystem=security/security-domain=smartJdbcRealm/authentication=classic:add(login-modules=[{code=Database, flag=Required, module-options={dsJndiName="java:/smartDS",principalsQuery="select senha from Passageiro where email = ?",rolesQuery="select 'Passageiro', 'Roles' from Passageiro where email = ?",hashAlgorithm="SHA-256",hashEncoding="base64"}}])
+
+reload
+
+quit
