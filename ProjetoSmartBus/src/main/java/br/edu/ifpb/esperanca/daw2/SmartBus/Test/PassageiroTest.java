@@ -16,7 +16,6 @@ public class PassageiroTest {
 		Passageiro pa = new Passageiro();
 		pa.setId(0L);
 		pa.setNome("ana");
-		pa.setIdade(5);
 		
 		PassageiroService service = new  PassageiroService();
 		service.save(pa);
@@ -27,7 +26,6 @@ public class PassageiroTest {
 		assertEquals("ana", pa2.getNome());
 		
 		pa2.setNome("bia");
-		pa2.setIdade(6);
 		
 		service.update(pa2);
 		
