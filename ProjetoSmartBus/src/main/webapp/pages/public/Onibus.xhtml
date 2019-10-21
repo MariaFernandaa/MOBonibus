@@ -57,13 +57,6 @@
 				<f:facet name="header">QuantPassageiro</f:facet>
 				<h:outputText value="#{entidade.quantPassageiro}" />
 			</p:column>
-			<p:column>
-				<f:facet name="header">Opções</f:facet>
-				<p:commandButton value="Remover" ajax="false"
-					action="#{onibusBean.remove(entidade)}"></p:commandButton>
-				<p:commandButton value="Editar" ajax="false"
-					action="#{onibusBean.editar(entidade.id)}"></p:commandButton>
-			</p:column>
 		</p:dataTable>
 	</h:form>
 </h:body>

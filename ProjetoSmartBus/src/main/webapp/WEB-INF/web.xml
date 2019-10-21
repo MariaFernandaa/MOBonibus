@@ -39,7 +39,7 @@
 		</web-resource-collection>
 		<auth-constraint>
 			<description />
-			<role-name>Passageiro</role-name>
+			<role-name>Login</role-name>
 		</auth-constraint>
 		<user-data-constraint>
 			<transport-guarantee>NONE</transport-guarantee>
@@ -63,6 +63,6 @@
 		<role-name>ADMIN</role-name>
 	</security-role>
 	<security-role>
-		<role-name>Passageiro</role-name>
+		<role-name>Administrador</role-name>
 	</security-role>
 </web-app>
