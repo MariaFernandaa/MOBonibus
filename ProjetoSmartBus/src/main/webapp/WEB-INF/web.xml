@@ -15,7 +15,7 @@
 	</servlet-mapping>
 	<context-param>
 		<param-name>primefaces.THEME</param-name>
-		<param-value>redmond</param-value>
+		<param-value>black-tie</param-value>
 	</context-param>
 	<welcome-file-list>
 		<welcome-file>/pages/private/gerenciadorUsuario.xhtml</welcome-file>
@@ -39,7 +39,7 @@
 		</web-resource-collection>
 		<auth-constraint>
 			<description />
-			<role-name>Login</role-name>
+			<role-name>Passageiro</role-name>
 		</auth-constraint>
 		<user-data-constraint>
 			<transport-guarantee>NONE</transport-guarantee>
@@ -53,16 +53,13 @@
 		</web-resource-collection>
 		<auth-constraint>
 			<description />
-			<role-name>ADMIN</role-name>
+			<role-name>Passageiro</role-name>
 		</auth-constraint>
 		<user-data-constraint>
 			<transport-guarantee>NONE</transport-guarantee>
 		</user-data-constraint>
 	</security-constraint>
 	<security-role>
-		<role-name>ADMIN</role-name>
-	</security-role>
-	<security-role>
-		<role-name>Administrador</role-name>
+		<role-name>Passageiro</role-name>
 	</security-role>
 </web-app>
