@@ -23,18 +23,30 @@
 			<p:outputLabel value="arCondicionado: " for="arCondicionadoField" />
 			<p:inputText id="arCondicionadoField"
 				value="#{avaliacaoBean.entidade.arCondicionado}" label="ArCondicionado" />
+				
+				<p:outputLabel value="arCondicionado: " for="starField" />
+				<p:rating id="starField" stars="5" ></p:rating>
 			
 		<p:outputLabel value="motorista: " for="motoristaField" />
 			<p:inputText id="motoristaField"
 				value="#{avaliacaoBean.entidade.motorista}" label="Motorista" />
+				
+				<p:outputLabel value="motorista: " for="starField" />
+				<p:rating id="starField" stars="5" ></p:rating>
 
 			<p:outputLabel value="horario: " for="horarioField" />
 			<p:inputText id="horarioField" value="#{avaliacaoBean.entidade.horario}"
 				label="Horario" style="width:350px" />
+				
+				<p:outputLabel value="horario: " for="starField" />
+				<p:rating id="starField" stars="5" ></p:rating>
 
 		<p:outputLabel value="assentos: " for="assentosField" />
 			<p:inputText id="assentosField"
 				value="#{avaliacaoBean.entidade.assentos}" label="Assentos" />
+				
+				<p:outputLabel value="assentos: " for="starField" />
+				<p:rating id="starField" stars="5" ></p:rating>
 
 			<p:commandButton id="btnNovo" value="Novo"
 				action="#{onibusBean.save()}" ajax="false" />
