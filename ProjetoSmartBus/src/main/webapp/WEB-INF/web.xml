@@ -53,13 +53,13 @@
 		</web-resource-collection>
 		<auth-constraint>
 			<description />
-			<role-name>Passageiro</role-name>
+			<role-name>Administrador</role-name>
 		</auth-constraint>
 		<user-data-constraint>
 			<transport-guarantee>NONE</transport-guarantee>
 		</user-data-constraint>
 	</security-constraint>
 	<security-role>
-		<role-name>Passageiro</role-name>
+		<role-name>Administrador</role-name>
 	</security-role>
 </web-app>

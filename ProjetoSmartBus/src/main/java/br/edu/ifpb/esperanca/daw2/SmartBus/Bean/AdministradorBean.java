@@ -4,11 +4,15 @@ import java.io.Serializable;
 import java.util.Collection;
 
 import javax.annotation.PostConstruct;
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
+import javax.inject.Named;
 
 import br.edu.ifpb.esperanca.daw2.SmartBus.Service.AdministradorService;
 import br.edu.ifpb.esperanca.daw2.SmartBus.entities.Administrador;
 
+@ViewScoped
+@Named
 public class AdministradorBean implements Serializable {
 	
 	@Inject
