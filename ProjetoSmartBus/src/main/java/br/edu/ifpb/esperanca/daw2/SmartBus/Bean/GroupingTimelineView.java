@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.Month;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Set;
 
@@ -47,17 +49,16 @@ public class GroupingTimelineView implements Serializable {
         model.addGroup(group5);
         model.addGroup(group6);
  
- 
+        int ano = 2000;
         // iterate over groups
         for (int j = 1; j <= 6; j++) {
-            LocalDateTime referenceDate = LocalDateTime.of(2015, Month.DECEMBER, 14, 8, 0);
             // iterate over events in the same group
             for (int i = 0; i < 6; i++) {
-                LocalDateTime startDate = referenceDate.plusHours(3 * (Math.random() < 0.2 ? 1 : 0));
- 
-                LocalDateTime endDate = startDate.plusHours(2 + (int) Math.floor(Math.random() * 4));
- 
-                referenceDate = endDate;
+                Date startDate = (new GregorianCalendar(ano++,10,20)).getTime();
+                Date endDate = (new GregorianCalendar(ano++,10,20)).getTime();
+        
+            
+                model.add(new TimelineEvent("Teste", startDate, endDate, true, "id" + j));
             }
         }
     }

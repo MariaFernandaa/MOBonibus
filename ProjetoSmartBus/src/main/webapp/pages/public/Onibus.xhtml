@@ -3,58 +3,25 @@
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:p="http://primefaces.org/ui">
-	
+
 <h:head>
-	<title> Onibus </title>
+	<title>Onibus</title>
 </h:head>
 
-
-
 <h:body>
+		<p:growl id="growl" showSummary="true" showDetail="false">
+		</p:growl>
+		<p:timeline id="timeline" value="#{groupingTimelineView.model}"
+			var="order" varGroup="truck" >
+			<f:facet name="group">
+				<h:graphicImage library="demo" name="images/timeline/truck.png"
+					style="vertical-align:middle;" alt="Truck" />
+				<h:outputText  value="Truck #{truck.code}"  style="font-weight:bold;" />
+			</f:facet>
 
-	<h:form id="form">
-    <p:growl id="growl" showSummary="true" showDetail="false">
-        <p:autoUpdate />
-    </p:growl>
- 
-    <p:timeline id="timeline" value="#{groupingTimelineView.model}" var="order" varGroup="truck"
-                editable="true" eventMargin="0" eventMarginAxis="0" stackEvents="false"
-                orientationAxis="top" widgetVar="timelineWdgt">
-        <f:facet name="group">
-            <h:graphicImage library="demo" name="images/timeline/truck.png" style="vertical-align:middle;" alt="Truck"/>
-            <h:outputText value="Truck #{truck.code}" style="font-weight:bold;"/>
-        </f:facet>
- 
-        <h:graphicImage library="demo" name="#{order.imagePath}" rendered="#{not empty order.imagePath}"
-                        style="display:inline; vertical-align:middle;" alt="Order"/>
-        <h:outputText value="Order #{order.number}"/>
-    </p:timeline>
- 
-    <p:dialog id="overlapEventsDlg" header="Overlapped Orders" widgetVar="overlapEventsWdgt"
-              showEffect="clip" hideEffect="clip">
-        <h:panelGroup id="overlappedOrdersInner" layout="block" style="padding:10px;">
-            <strong>
-                Please choose Orders you want to merge with the Order #{groupingTimelineView.selectedOrder}
-            </strong>
- 
-            <p/>
- 
-            <p:selectManyMenu id="overlappedOrders" value="#{groupingTimelineView.ordersToMerge}"
-                              showCheckbox="true">
-                <f:selectItems value="#{groupingTimelineView.overlappedOrders}" var="order"
-                               itemLabel=" Order #{order.data.number}" itemValue="#{order}"/>
-                <f:convertOrder events="#{groupingTimelineView.model.events}"/>
-            </p:selectManyMenu>
-        </h:panelGroup>
- 
-        <f:facet name="footer">
-            <h:panelGroup layout="block" style="text-align:right; padding:2px; white-space:nowrap;">
-                <p:commandButton value="Merge" process="overlapEventsDlg" update="@none"
-                                 action="#{groupingTimelineView.merge}"
-                                 oncomplete="PF('overlapEventsWdgt').hide()"/>
-                <p:commandButton type="button" value="Close" onclick="PF('overlapEventsWdgt').hide()"/>
-            </h:panelGroup>
-        </f:facet>
-    </p:dialog>
-	</h:form>
+			<h:graphicImage library="demo" name="#{order.imagePath}"
+				rendered="#{not empty order.imagePath}" />
+        <h:outputText value="Order #{order.number}" />
+		</p:timeline>
 </h:body>
+</html>
