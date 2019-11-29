@@ -20,10 +20,6 @@
     <p:timeline id="timeline" value="#{groupingTimelineView.model}" var="order" varGroup="truck"
                 editable="true" eventMargin="0" eventMarginAxis="0" stackEvents="false"
                 orientationAxis="top" widgetVar="timelineWdgt">
-        <p:ajax event="changed" update="@none" listener="#{groupingTimelineView.onChange}"/>
-        <p:ajax event="delete" update="@none" listener="#{groupingTimelineView.onDelete}"/>
-        <p:ajax event="add" update="@none" onstart="PF('timelineWdgt').cancelAdd()"/>
- 
         <f:facet name="group">
             <h:graphicImage library="demo" name="images/timeline/truck.png" style="vertical-align:middle;" alt="Truck"/>
             <h:outputText value="Truck #{truck.code}" style="font-weight:bold;"/>
