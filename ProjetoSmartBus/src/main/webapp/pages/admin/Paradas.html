@@ -35,6 +35,10 @@
 		<p:dataTable id="dataTableEntidades" border="1" var="entidade"
 			value="#{ParadasBean.entidades}">
 			
+			<p:column>
+				<f:facet name="header">ID</f:facet>
+				<h:outputText value="#{entidade.id}" />
+			</p:column>
 				<f:facet localizaçao="header">localizacao</f:facet>
 				<h:outputText value="#{entidade.localizaçao}" />
 			</p:column>

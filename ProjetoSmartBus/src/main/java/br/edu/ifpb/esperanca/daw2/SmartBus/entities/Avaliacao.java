@@ -18,7 +18,6 @@ public class Avaliacao extends Identificavel {
 	@GeneratedValue(generator="avaliacao_seq", strategy=GenerationType.SEQUENCE)
 	@SequenceGenerator(name="avaliacao_seq")
 	private Long id;
-	private String arCodicionado;
 	private String horario;
 	private String assentos;
 	private String motorista;
@@ -35,8 +34,8 @@ public class Avaliacao extends Identificavel {
 		this.id = id_avaliacao;
 	}
 
-	public String getarCondicionado () {
-		return getarCondicionado();
+	public String getArCondicionado () {
+		return arCondicionado;
 	}
 
 	public void setArCondicionado(String arCondicionado) {

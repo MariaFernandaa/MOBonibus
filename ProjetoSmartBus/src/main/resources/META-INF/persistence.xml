@@ -11,10 +11,11 @@
 		<class>br.edu.ifpb.esperanca.daw2.SmartBus.entities.Precos</class>
 		<class>br.edu.ifpb.esperanca.daw2.SmartBus.entities.Rodoviaria</class>
 		<class>br.edu.ifpb.esperanca.daw2.SmartBus.entities.Cadastro</class>
+		<class>br.edu.ifpb.esperanca.daw2.SmartBus.entities.Avaliacao</class>
 	
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-			<!-- <property name="hibernate.hbm2ddl.auto" value="create" /> -->
+			<property name="hibernate.hbm2ddl.auto" value="update" /> 
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="true" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
