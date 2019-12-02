@@ -5,18 +5,18 @@
 	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
-	<title>Onibus</title>
+	<title> Onibus </title>
 </h:head>
 
 <h:body>
 		<p:growl id="growl" showSummary="true" showDetail="false">
 		</p:growl>
 		<p:timeline id="timeline" value="#{groupingTimelineView.model}"
-			var="order" varGroup="truck" >
+			var="order" varGroup="onibus" >
 			<f:facet name="group">
-				<h:graphicImage library="demo" name="images/timeline/truck.png"
-					style="vertical-align:middle;" alt="Truck" />
-				<h:outputText  value="Truck #{truck.code}"  style="font-weight:bold;" />
+				<h:graphicImage library="demo" name="onibus.png"
+					style="vertical-align:middle;" alt="Onibus" />
+				<h:outputText  value="Onibus #{onibusBean.entidade.onibus}"  style="font-weight:bold;" />
 			</f:facet>
 
 			<h:graphicImage library="demo" name="#{order.imagePath}"

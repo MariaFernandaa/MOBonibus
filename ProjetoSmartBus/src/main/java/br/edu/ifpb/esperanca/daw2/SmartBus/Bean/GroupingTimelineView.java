@@ -40,8 +40,8 @@ public class GroupingTimelineView implements Serializable {
         TimelineGroup group4 = new TimelineGroup("id4", ("13"));
         TimelineGroup group5 = new TimelineGroup("id5", ("14"));
         TimelineGroup group6 = new TimelineGroup("id6", ("15"));
- 
         // add groups to the model
+        
         model.addGroup(group1);
         model.addGroup(group2);
         model.addGroup(group3);

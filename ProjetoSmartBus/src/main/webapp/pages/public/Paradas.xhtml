@@ -9,47 +9,14 @@
 
 
 <h:body>
-	<p:messages />
-
-	<h:form>
-		<p:panelGrid columns="2" >
-			<f:facet name="caption">
-				<h:outputText value="Filtros" />
-			</f:facet>
-			<f:facet name="header">
-				<h:outputText value="Paradas" />
-			</f:facet>
-
-			<p:outputLabel value="Localizacao: " for="localizacaoField" />
-			<p:inputText id="localizacaoField" value="#{paradasBean.entidade.localizacao}"
-				label="Localizacao" style="width:350px" />
-
-
-			<p:commandButton id="btnNovo" value="Novo"
-				action="#{paradasBean.save()}" ajax="false" />
-			<p:commandButton id="btnLimpar" value="Limpar"
-				action="#{paradasBean.limpar()}" ajax="false"/>
-		</p:panelGrid>
-
-
-		<p:dataTable id="dataTableEntidades" border="1" var="entidade"
-			value="#{paradasBean.entidades}">
-			<p:column>
-				<f:facet name="header">ID</f:facet>
-				<h:outputText value="#{entidade.id}" />
-			</p:column>
-			<p:column>
-				<f:facet name="header">Localizacao</f:facet>
-				<h:outputText value="#{entidade.localizacao}" />
-			</p:column>
-			<p:column>
-				<f:facet name="header">Opções</f:facet>
-				<p:commandButton value="Remover" ajax="false"
-					action="#{paradasBean.remove(entidade)}"></p:commandButton>
-				<p:commandButton value="Editar" ajax="false"
-					action="#{paradasBean.editar(entidade.id)}"></p:commandButton>
-			</p:column>
-		</p:dataTable>
-	</h:form>
+	<p:dataTable var="car" value="#{dtBasicView.cars}">
+    <p:column headerText="Id do Onibus">
+        <h:outputText value="#{car.id}" />
+    </p:column>
+ 
+    <p:column headerText="Cidades de Paradas">
+        <h:outputText value="#{car.color}" />
+    </p:column>
+</p:dataTable>
 </h:body>
 </html>
