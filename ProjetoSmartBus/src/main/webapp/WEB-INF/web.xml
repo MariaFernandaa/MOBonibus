@@ -18,7 +18,7 @@
 		<param-value>black-tie</param-value>
 	</context-param>
 	<welcome-file-list>
-		<welcome-file>/pages/private/gerenciadorUsuario.xhtml</welcome-file>
+		<welcome-file>/pages/admin/gerenciadorUsuario.xhtml</welcome-file>
 	</welcome-file-list>
 	<session-config>
 		<session-timeout>1</session-timeout>
@@ -60,6 +60,18 @@
 		</user-data-constraint>
 	</security-constraint>
 	<security-role>
-		<role-name>Administrador</role-name>
+		<role-name>Precos</role-name>
+	</security-role>
+		<security-role>
+		<role-name>Onibus</role-name>
+	</security-role>
+		<security-role>
+		<role-name>Paradas</role-name>
+	</security-role>
+		<security-role>
+		<role-name>Horario</role-name>
+	</security-role>
+		<security-role>
+		<role-name>Rodoviaria</role-name>
 	</security-role>
 </web-app>
